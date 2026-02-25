@@ -3,27 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+   <link 
+    rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/ modern-normalize.min.css">
+
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100..900&display=swap" 
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="./css/styles.css">
+  <title>Simply Chocolate</title>
 </head>
 <body>
-  <header class="header">
-    <nav class="header-nav"></nav>
-    <a class="header-logo" href="./index.html">SIMPLY CHOCOLATE</a>
-      <ul class="header-nav-list">
-        <li class="nav-list-item">
-          <a class="nav-list-link" href="./index.html">Home</a>
+  <header class="page-header">
+    <nav class="page-nav">
+    <a class="page-logo" href="./index.html"><em>SIMPLY</em> CHOCOLATE</a>
+      <ul class="page-menu">
+        <li class="page-menu-item">
+          <a class="page-menu-link" href="./index.html">Home</a>
         </li>
-        <li class="nav-list-item">
-          <a class="nav-list-link" href="#making-process">How it’s made?</a>
+        <li class="page-menu-item">
+          <a class="page-menu-link" href="#making-process">How it’s made?</a>
         </li>
-        <li class="nav-list-item">
-          <a class="nav-list-link" href="#reviews">Chocolate is loved</a>
+        <li class="page-menu-item">
+          <a class="page-menu-link" href="#reviews">Chocolate is loved</a>
         </li>
       </ul>
     </nav>
   </header>
 
-  <main class="main">
+  <main>
     <section class="hero">
       <h1 class="hero-title">Treat yourself or a loved one to 
           our finest ingredients for a moment 
@@ -34,7 +46,7 @@
       <a href="#benefits">scroll down</a>
     </section>
     <section id="benefits">
-      <h2 hidden class="benefits-title">Benefits</h2>
+      <h2 class="visually-hidden benefits-title">Benefits</h2>
       <ul class="benefits-list">
         <li class="benefits-list-item">
           <h3 class="benefits-subtitle">Unsurpassed taste</h3>
@@ -163,7 +175,7 @@
     <p>
       <span class="span-footer">Chocolate</span> a delicious cure for a bad day
     </p>
-    <adresse>
+    <adresse class="adresse-footer">
       <p>Contact us</p>
       <ul class="adresse">
         <li>
@@ -177,13 +189,13 @@
     <nav>
       <ul class="footer-nav-list">
         <li class="footer-nav-item">
-          <a href="./index.html">Home</a>
+          <a class="page-menu-link" href="./index.html">Home</a>
         </li>
         <li class="footer-nav-item">
-          <a href="#making-process">How it’s made?</a>
+          <a class="page-menu-link" href="#making-process">How it’s made?</a>
         </li>
         <li class="footer-nav-item">
-          <a href="#reviews">Chocolate is loved</a>
+          <a class="page-menu-link" href="#reviews">Chocolate is loved</a>
         </li>
       </ul>
     </nav>

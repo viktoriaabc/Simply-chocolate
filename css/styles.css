@@ -1,0 +1,84 @@
+:root {
+  /* --primery-font:"Montserrat Regular";
+  --secondary-font: "Montserrat SemiBold";
+  --primery-text-font:;
+  --secondary-tet-font:;
+  font-weight: 400;
+--font-size: 14px;
+letter-spacing: -0.02em;
+
+--primery-color: #FAFAFA
+--secondary-color:#1E1823;
+--accent-color: #FD9222;
+  --title-letter-spacing:;
+  --text-letter-spacing:; */
+   */
+}
+
+*,
+*::before,
+*::after {
+box-sizing : border-box;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  margin-top: 0;
+  margin-bottom: 0;
+} 
+
+
+a {
+text-decoration: none;
+
+/*.page-menu-link {
+ color:inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: ;
+  line-height: ;
+  background-color: ;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+} 
+/* @media min-width: cursor:pointer;  */
+
+img {
+  display: block;
+}
+
+/* .button {
+  font-family: inherit;
+} */
+.adresse-footer {
+font-style : normal ;
+}
+
+.page-logo {
+  color: var(--accent-color);
+}
+
+ .visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+border: 0;
+white-space: nowrap;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+clip-path: inset(100%);
