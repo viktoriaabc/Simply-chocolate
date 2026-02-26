@@ -6,42 +6,34 @@
   font-weight: 400;
 --font-size: 14px;
 letter-spacing: -0.02em;
-
+*/
 --primery-color: #FAFAFA
 --secondary-color:#1E1823;
 --accent-color: #FD9222;
   --title-letter-spacing:;
-  --text-letter-spacing:; */
-   */
+  --text-letter-spacing:;
+   
 }
 
-*,
+/* *,
 *::before,
 *::after {
 box-sizing : border-box;
-}
+} */
 
 ul,
 ol {
-  list-style-type: none;
+  /* list-style-type: none; //padding-left: 0; */
   margin-top: 0;
   margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
 } 
 
 
 a {
 text-decoration: none;
-
-/*.page-menu-link {
- color:inherit;
-}
-
-body {
-  font-family: "Montserrat", sans-serif;
-  color: ;
-  line-height: ;
-  background-color: ;
-
+color: inherit;
 }
 
 h1,
@@ -54,15 +46,33 @@ p {
   margin-top: 0;
   margin-bottom: 0;
 } 
+
+body {
+  font-family: "Montserrat", sans-serif;
+  color: ;
+  line-height: ;
+  background-color: ;
+  font-size: 14px;
+}
+
+
 /* @media min-width: cursor:pointer;  */
 
 img {
   display: block;
+  max-width: 100%;
 }
 
-/* .button {
-  font-family: inherit;
-} */
+button {
+  cursor: pointer;
+}
+
+.section-title {
+  font-weight: 600px;
+  font-size: 20px;
+
+
+}
 .adresse-footer {
 font-style : normal ;
 }
@@ -71,7 +81,7 @@ font-style : normal ;
   color: var(--accent-color);
 }
 
- .visually-hidden {
+.visually-hidden {
 position: absolute;
 width: 1px;
 height: 1px;
@@ -82,3 +92,63 @@ white-space: nowrap;
 overflow: hidden;
 clip: rect(0, 0, 0, 0);
 clip-path: inset(100%);
+}
+
+
+.container {
+  width: 1168;
+  padding-left: 16px;
+  padding-right: 16px; /*рожеві полоски макету щоб текст не прилипав до рамки сторінки користувача*/
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-navigation {
+  display: flex;
+  align-items: center; /*margin-top:auto; margin-left: auto;*/
+}
+.page-menu {
+  display: flex;
+  margin-left: auto; /*витиснути вправо*/
+  column-gap: 24px;
+}
+.page-menu-link {
+   display:block;  /*щоб додати висоту в хедері і посилання ставало активним навколо назви посилання слід додати падінги вгорі і знизу, до рядкових ел ці падінги не застосовуються тому слід змінити на блок. */
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.hero-section {
+  max-width: 1200px;
+  background-color: ;
+  margin-right: auto;
+  margin-right: auto;
+  /* color: var(); наслідуватиметься всіма елементами секції*/
+}
+/* .hero-section .container */
+.hero-section-container {
+  padding-left: 56px;
+  padding-right: 56px;
+  padding-top: 381px;
+  padding-bottom: 40px;
+}
+.main-title {
+  max-width: 484px;
+  font-size: 26px;
+
+
+}
+
+.reviews-section-title {
+  margin-bottom: 91px;
+}
+.reviews-list {
+  display: flex;
+  width: calc((100% - 28px * 2) / 3);
+}
+.reviews-list-item {
+  border: ;
+  border-radius: ;
+  box-shadow: ;
+  background-color: ;
+  padding: 56px 24px 24px 24px;
+}
