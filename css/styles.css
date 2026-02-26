@@ -1,3 +1,5 @@
+/* Global styles */
+
 :root {
   /* --primery-font:"Montserrat Regular";
   --secondary-font: "Montserrat SemiBold";
@@ -67,18 +69,21 @@ button {
   cursor: pointer;
 }
 
+
 .section-title {
   font-weight: 600px;
   font-size: 20px;
 
 
 }
-.adresse-footer {
-font-style : normal ;
-}
 
-.page-logo {
-  color: var(--accent-color);
+/* HEADER */
+
+.mobile-menu-icon {
+  margin-left: auto;
+}
+.page-logo-icon {
+  fill: var(--accent-color);
 }
 
 .visually-hidden {
@@ -151,4 +156,8 @@ clip-path: inset(100%);
   box-shadow: ;
   background-color: ;
   padding: 56px 24px 24px 24px;
+}
+/* FOOTER */
+.adresse-footer {
+font-style : normal ;
 }
