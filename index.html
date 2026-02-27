@@ -18,8 +18,8 @@
   <title>Simply Chocolate</title>
 </head>
 <body>
-  <header class="page-header">
-    <div class="container">
+  <header class="page-header container">
+    <div class="container header-container">
        
         <a class="page-logo" href="./index.html">
           <em>SIMPLY</em> CHOCOLATE
@@ -31,14 +31,9 @@
             </use>
           </svg>
         </a>
+        
       <nav class="page-navigation"></nav>
-        <svg 
-          class="mobile-menu-icon"
-          width="28"
-          height="28">
-          <use href="./images/icons.svg#icon-menu">
-          </use>
-        </svg>
+        
         <ul class="page-menu">
           <li class="page-menu-item">
             <a class="page-menu-link" href="./index.html">Home</a>
@@ -51,6 +46,38 @@
           </li>
         </ul>
       </nav>
+      <ul class="socials-list">
+        <li class="socials-item">
+          <a class="socials-link" aria-label="link to facebook" href="https://">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-item"> <a class="socials-link" aria-label="link to instagram" href="https://">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a></li>
+        <li class="socials-item">
+          <a class="socials-link"aria-label="link to twitter" href="https://">
+            <svg class="socials-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+            </svg>
+          </a></li>
+      </ul>
+      <button 
+          class="mobile-menu-button" 
+          type="button"
+          data-menu-open> 
+          <svg 
+            class="mobile-menu-icon"
+            width="28"
+            height="28">
+            <use href="./images/icons.svg#icon-menu">
+            </use>
+          </svg>
+          </button>
     </div>
   </header>
 
@@ -60,9 +87,16 @@
           our finest ingredients for a moment 
           of pure delight!
       </h1>
-      <button class="hero-logo-btn" type="button">Buy now</button>
+      <a href="#products">Buy now</a>
       <a href="#">How it’s made</a>
-      <a href="#benefits">scroll down</a>
+      <a href="#benefits">scroll down
+        <span class="scroll-span">
+          <svg class="scroll-span-svg" width="16" height="16">
+            <use href="./images/icons.svg#icon-scroll">
+            </use>
+          </svg>
+        </span>
+      </a>
     </section>
     <section id="benefits">
       <h2 class="visually-hidden benefits-title">Benefits</h2>
@@ -144,6 +178,134 @@
         </li>
       </ul>
     </section>
+    <section id="products">
+      <h2 class="section-title" >
+        Our <span class="products-span">products</span>
+      </h2>
+      <ul class="products-list">
+        <li class="products-item">
+          <img 
+            srcset="./images/products/products1.jpg 1x, ./images/products/products1.jpg 2x"
+            class="products-img"
+            src="./index.html/images/products/products1.jpg" 
+            alt="Photo of dark chocolate with orange"
+            width="230"
+            height="201">
+            <h3>Orange</h3>
+              <p>Dark chocolate</p>
+                <div class="products-price">45 UAN</div>
+              
+            
+          </img>
+        </li>
+        <li class="products-item">
+          <img
+            srcset="./images/products/products2.jpg 1x, ./images/products/products2.jpg 2x"
+            class="products-img"
+            src="./index.html/images/products/products2.jpg" 
+            alt="Photo of milk chocolate with apple and cranberry"
+            width="230"
+            height="201">
+            <h3>Apple&amp;Cranberry</h3>
+              <p>Milk chocolate</p>
+                <div class="products-price">50 UAN</div>
+              
+            
+          </img>
+        </li>
+        <li class="products-item">
+          <img
+            srcset="./images/products/products3.jpg 1x, ./images/products/products3.jpg 2x" 
+            class="products-img"
+            src="./index.html/images/products/products3.jpg" 
+            alt="Photo of dark chocolate with lime and sea salt"
+            width="230"
+            height="201">
+            <h3>Lime&amp;Sea salt</h3>
+              <p>Dark chocolate</p>
+                <div class="products-price">66 UAN</div>
+              
+            
+          </img>
+        </li>
+        <li class="products-item">
+          <img
+            srcset="./images/products/products4.jpg 1x, ./images/products/products4.jpg 2x"
+            class="products-img"
+            src="./index.html/images/products/products4.jpg" 
+            alt="Photo of dark chocolate with pineapple"
+            width="230"
+            height="201">
+            <h3>Pineapple</h3>
+              <p>Dark chocolate</p>
+                <div class="products-price">54 UAN</div>
+              
+            
+          </img>
+        </li>
+        <li class="products-item">
+          <img
+            srcset="./images/products/products5.jpg 1x, ./images/products/products5.jpg 2x"
+            class="products-img"
+            src="./index.html/images/products/products5.jpg" 
+            alt="Photo of milk classic chocolate"
+            width="230"
+            height="201">
+            <h3>Classic</h3>
+              <p>Milk chocolate</p>
+                <div class="products-price">45 UAN</div>
+              
+            
+          </img>
+        </li>
+        <li class="products-item">
+          <img
+            srcset="./images/products/products6.jpg 1x, ./images/products/products6.jpg 2x"
+            class="products-img"
+            src="./index.html/images/products/products6.jpg" 
+            alt="Photo of milk chocolate with honey"
+            width="230"
+            height="201">
+            <h3>Honey</h3>
+              <p>Milk chocolate</p>
+                <div class="products-price">50 UAN</div>
+              
+            
+          </img>
+        </li>
+        <li class="products-item">
+          <img
+            srcset="./images/products/products7.jpg 1x, ./images/products/products7.jpg 2x"
+            class="products-img"
+            src="./index.html/images/products/products7.jpg" 
+            alt="Photo of dark chocolate with roasted fruits"
+            width="230"
+            height="201">
+            <h3>Roasted fruits</h3>
+              <p>Dark chocolate</p>
+                <div class="products-price">66 UAN</div>
+              
+            
+          </img>
+        </li>
+        <li class="products-item">
+          <img
+            srcset="./images/products/products8.jpg 1x, ./images/products/products8.jpg 2x"
+            class="products-img"
+            src="./index.html/images/products/products8.jpg" 
+            alt="Photo of white classic chocolate"
+            width="230"
+            height="201">
+            <h3>Classic</h3>
+              <p>White chocolate</p>
+                <div class="products-price">54 UAN</div>
+              
+            
+          </img>
+        </li>
+      </ul>
+
+    </section>
     <section id="reviews reviews-section-title">
       <h2 class="reviews-title">CHOCOLATE IS LOVED</h2>
       <ul class="reviews-list">
@@ -194,14 +356,15 @@
     <p>
       <span class="span-footer">Chocolate</span> a delicious cure for a bad day
     </p>
-    <adresse class="adresse-footer">
+    <adresse class="contacts-footer">
       <p>Contact us</p>
-      <ul class="adresse">
-        <li>
+      <ul class="contacts-list">
+        <li class="contacts-item">
           <a href="tel:+380684439426">+380 (68) 443-94-26</a>
         </li>
-        <li>
-          <a href="mailto:simplycthoc@gmail.com">simplycthoc@gmail.com</a>
+        <li class="contacts-item">
+          <a href="mailto:simplycthoc@gmail.com">simplycthoc@gmail.com
+          </a>
         </li>
       </ul>
     </adresse>
@@ -214,7 +377,8 @@
           <a class="page-menu-link" href="#making-process">How it’s made?</a>
         </li>
         <li class="footer-nav-item">
-          <a class="page-menu-link" href="#reviews">Chocolate is loved</a>
+          <a class="page-menu-link" href="#reviews">Chocolate is loved
+          </a>
         </li>
       </ul>
     </nav>
