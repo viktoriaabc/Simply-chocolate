@@ -110,7 +110,7 @@ button {
 .header-container {
   display: flex;
   align-items: center;
-  margin-bottom: 14px;
+  
 }
 
 .page-navigation {
@@ -154,13 +154,11 @@ button {
 }
 
 @media only screen and (min-width: 768px) {
- .socials-list {
+  .socials-list {
   display: flex;
   align-items: center;
-  margin-left: 28px;
   column-gap: 14px;
-
- }
+  }
   .page-menu-link{
     display: block;
     padding: 30px 0;
@@ -183,16 +181,18 @@ button {
   border-radius: 10px;
   width: 40px;
   height: 40px;
-  
+  }
 }
+
+@media only screen and (min-width: 1200px) {
+ .socials-list {
+  display: flex;
+  align-items: center;
+  margin-left: 90px;
+  column-gap: 14px;
+ 
+ }
 }
-
-
-
-
-
-
-
 
 /* .page-menu-link {
    display:block;  щоб додати висоту в хедері і посилання ставало активним навколо назви посилання слід додати падінги вгорі і знизу, до рядкових ел ці падінги не застосовуються тому слід змінити на блок. */
@@ -232,6 +232,15 @@ fill: var(--secondary-text-color-dark);
   .mobile-menu-button{
     display: none;
   }
+  .page-menu {
+    gap: 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .page-menu {
+    gap: 24px;
+  }
 }
 
 /* HERRO */
@@ -239,10 +248,10 @@ fill: var(--secondary-text-color-dark);
   padding-bottom: 80px;
 }
 .hero-container {
-  
+  padding: 392px 20px 20px;
   border-radius: 30px;
   background-repeat: no-repeat;
-  block-size: cover;
+  background-size: cover;
   max-width: 335px;
   background-position: center;
   background-color: var(--primary-text-color-dark);
@@ -317,8 +326,9 @@ fill: var(--secondary-text-color-dark);
 }
 
 .main-title {
-  padding: 400px 21px 32px;
-  font-family: var(--second-family);
+  max-width: ;
+  margin-bottom: 32px;
+  font-family: var(--primery-font-family);
   font-weight: var(--font-weight-h1);
   font-size: var(--font-size-h1-mob);
   line-height: 1.2;
@@ -329,19 +339,9 @@ fill: var(--secondary-text-color-dark);
 @media only screen and (min-width: 768px) {
   .main-title {
     max-width: 484px;
-    margin-left: 40px;
-    padding-top: 384px;
-    padding-left: 0;
-    padding-right: 0;
-    font-weight: var(--font-weight-h1);
     font-size: var(--font-size-h1);
-    line-height: 1.2;
   }
 }
-/* .main-title {
-  max-width: 484px;
-  font-size: 26px;
-}  */
 
 .hero-down-btn {
   display: flex;
@@ -350,15 +350,13 @@ fill: var(--secondary-text-color-dark);
 
 .hero-btn-wrap {
   display:flex;
-  padding: 0 21px 32px;
-  justify-content: space-between;
   gap: 14px;
+  margin-bottom: 32px;
 }
 .hero-btn-buynow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 120px;
+  padding: 12px 28px;
+ 
+  min-width: 120px;
   height: 41px;
   border-radius: 100px;
   color: var(--primary-text-color-clear);
@@ -368,10 +366,8 @@ fill: var(--secondary-text-color-dark);
 }
 
 .hero-btn-making {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 159px;
+  padding: 12px 28px;
+  min-width: 159px;
   height: 41px;
   border-radius: 100px;
   color: var(--primary-text-color-clear);
@@ -380,18 +376,11 @@ fill: var(--secondary-text-color-dark);
   font-weight: var(--font-weight-h1mob-h2-h3);
   font-size: var(--font-size-text);
 }
-/* .hero-section .container */
-/* .hero-section-container {
-  padding-left: 56px;
-  padding-right: 56px;
-  padding-top: 381px;
-  padding-bottom: 40px;
-}*/
+
 
 .hero-scroll {
   display: flex;
   align-items: center;
-  margin: 0 186px 15px 21px;
   gap: 12px;
   color: var(--primary-text-color-clear);
   font-weight: var(--font-weight-h1);
@@ -415,14 +404,15 @@ fill: var(--secondary-text-color-dark);
 .hero-scroll:focus {
 color: var(--accent-color);
 }
-.scroll-span:hover,
-.scroll-span:focus{
+.hero-scroll:hover .scroll-span,
+.hero-scroll:focus .scroll-span {
 background: var(--accent-color);
 }
-.scroll-span-svg:hover,
-.scroll-span-svg:focus {
+.hero-scroll:hover .scroll-span-svg,
+.hero-scroll:focus .scroll-span-svg {
 fill: var(--primary-text-color-clear);
 } 
+
 
 @media only screen and (min-width: 768px){
 .hero-down-btn {
@@ -437,12 +427,12 @@ fill: var(--primary-text-color-clear);
   .hero-btn-wrap {
     padding: 0;
     gap: 14px;
-
 }
 }
 
 @media only screen and (min-width: 768px){
   .hero-btn-buynow {
+    padding: 14px 40px;
     width: 144px;
     height: 45px;
     font-weight: var(--font-weight-h1mob-h2-h3);
@@ -451,6 +441,7 @@ fill: var(--primary-text-color-clear);
 }
 @media only screen and (min-width: 768px) {
   .hero-btn-making {
+    padding: 14px 40px;
     width: 183px;
     height: 45px;
     border-radius: 100px;
@@ -483,6 +474,11 @@ fill: var(--primary-text-color-clear);
   }
 
 }
+
+
+/* 
+
+
 /* BENEFITS */
 .visually-hidden {
 position: absolute;
