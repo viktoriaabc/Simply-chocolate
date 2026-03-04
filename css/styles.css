@@ -78,23 +78,27 @@ button {
   font-family: inherit;
 }
 
+.accent-color {
+  color: var(--accent-color);
+}
 .container {
-  max-width: 351px;
-  padding: 0 8px;
+  min-width: 320px;
+  max-width: 375px;
+  padding: 0 20px;
   margin-left: auto;
   margin-right: auto;
 }
 
  @media only screen and (min-width: 768px) {
   .container {
-   max-width: 768px; 
+    max-width: 768px;
+    padding-left: 32px;  
+    padding-right: 32px; 
   }
 }
-@media only screen and (min-width: 1168px) {
+@media only screen and (min-width: 1200px) {
   .container {
-    max-width: 1168px;
-    padding-left: 16px;  
-    padding-right: 16px;
+    max-width: 1200px;
  
   }
 }
@@ -124,7 +128,7 @@ button {
   letter-spacing: -0.03em;
   color: var(--secondary-text-color-dark);
 }
-@media only screen and (min-width: 351px) {
+
   .page-logo {
   font-size: var(--font-size-h3);
   line-height: 20px;
@@ -132,31 +136,31 @@ button {
   letter-spacing: -0.03em;
   color: var(--secondary-text-color-dark);
 }
-}
+
 .page-logo-icon {
   stroke: var(--accent-color);
   fill: none;
 }
 
-@media only screen and (min-width: 351px) {
+
   .page-logo-icon {
     width: 24px;
     height: 24px;
   }
-}
-  .page-menu {
-    display: flex;
-    column-gap: 24px;
-    margin-left: auto;
-    margin-top:auto;
-  }
 
-@media only screen and (max-width: 351px){
-  .page-menu {
+  .page-menu,
+  .socials-list {
     display: none;
 }
-}
 
+@media only screen and (min-width: 768px) {
+ .socials-list {
+  display: flex;
+  align-items: center;
+  margin-left: 28px;
+  column-gap: 14px;
+
+ }
   .page-menu-link{
     display: block;
     padding: 30px 0;
@@ -165,22 +169,13 @@ button {
     color: var(--secondary-text-color-dark);
     font-family: var(--second-family);
   }
-
- .socials-list {
-  display: flex;
-  align-items: center;
-  margin-left: 28px;
-  column-gap: 14px;
-}
-
-
-@media only screen and (max-width: 351px) {
-  .socials-list {
-  display: none;
-}
-}
-
-.socials-link {
+  .page-menu {
+    display: flex;
+    column-gap: 24px;
+    margin-left: auto;
+    margin-top:auto;
+  }
+  .socials-link {
   display:flex;
   justify-content: center;
   align-items: center;
@@ -188,8 +183,16 @@ button {
   border-radius: 10px;
   width: 40px;
   height: 40px;
-  stroke: var(--primary-text-color-dark);
+  
 }
+}
+
+
+
+
+
+
+
 
 /* .page-menu-link {
    display:block;  щоб додати висоту в хедері і посилання ставало активним навколо назви посилання слід додати падінги вгорі і знизу, до рядкових ел ці падінги не застосовуються тому слід змінити на блок. */
@@ -208,7 +211,7 @@ button {
 
 .socials-icon {
    stroke: currentColor;
-   fill: currentColor;
+   fill: currentColor;/*видалить stroke*/
 } 
 
 .mobile-menu-button {
@@ -223,28 +226,24 @@ button {
 .mobile-menu-icon {
 fill: var(--secondary-text-color-dark);
 }
-.mobile-menu-icon:hover,
-.mobile-menu-icon:focus {
-  width: 32px;
-  height: 32px;
-}
 
-@media only screen and (min-width: 351px) {
+
+@media only screen and (min-width: 768px) {
   .mobile-menu-button{
     display: none;
   }
 }
 
 /* HERRO */
-.hero-section{
-  display: block;
-  width: 100%;
+.hero-section {
+  padding-bottom: 80px;
+}
+.hero-container {
+  
   border-radius: 30px;
-  max-width: 335px;
-  height: 621px;
-  margin: 0 auto;
   background-repeat: no-repeat;
-  background-size: cover;
+  block-size: cover;
+  max-width: 335px;
   background-position: center;
   background-color: var(--primary-text-color-dark);
   background-image: linear-gradient(
@@ -252,12 +251,10 @@ fill: var(--secondary-text-color-dark);
     rgba(17, 17, 17, 0.4)
     ),
     url(../images/hero/hero_mob.jpg);
-  
-    margin-bottom: 106px;
 }
 
 @media (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero-section {
+  .hero-container {
     background-image:
     linear-gradient(
       rgba(17, 17, 17, 0.4),
@@ -265,17 +262,17 @@ fill: var(--secondary-text-color-dark);
     ),
     url(../images/hero/hero_mob@2x.jpg);
   
-  }
+  } 
 }
 
 @media only screen and (min-width: 768px) {
   .hero-section {
-    max-width: 768px;
-    padding: ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    margin-bottom: 51px;
+  padding-bottom: 40px;
+  }
+  .hero-container {
+    max-width: 704px;
+    padding: 670px 40px 40px;
+    
      background-image: linear-gradient(
     rgba(17, 17, 17, 0.4),
     rgba(17, 17, 17, 0.4)
@@ -290,15 +287,17 @@ fill: var(--secondary-text-color-dark);
     ),
     url(../images/hero/hero_tab@2x.jpg);
     }
-    
-}
+  } 
 }
 
-@media only screen and (min-width: 1168px) {
+
+@media only screen and (min-width: 1200px) {
   .hero-section {
-    max-width: 1168px;
-    padding: ;
-    margin-bottom: 80px;
+    padding-bottom: 80px;
+  }
+    .hero-container {
+    max-width: 1136px;
+    padding: 380px 40px 40px;
     background-image: 
     linear-gradient(
     rgba(17, 17, 17, 0.4),
@@ -313,7 +312,7 @@ fill: var(--secondary-text-color-dark);
     ),
     url(../images/hero/hero_desktop@2x.jpg);
     }
-    
+  
 }
 }
 
@@ -570,3 +569,159 @@ color: rgba(255, 255, 255, 0.7);
 .adresse-footer {
 font-style : normal ;
 }
+
+/* .backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  background-color: rgb( 0 0 0 / 0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms linear;
+}
+/* центрування вікна модал фіксом на бекдроп або абсолютом на бекдроп, кнопку закриття слід прикріпити на абсолюті тому що так обидва абсолютом */
+/* .backdrop.is-open {
+  opacity:1;
+  pointer-events: auto;
+}
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate();
+  width: 517;
+  height: 734;
+  border-radius: 15px;
+  background-color: var(--primary-text-color-clear);
+  padding: 40px;
+}
+.modal-close-btn {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  stroke: #ffffff;
+  transition: stroke 250ms linear;
+}
+
+.modal-close-btn:hover,
+.modal-close-btn:focus {
+stroke: var(--accent-color);
+}
+.modal-close-btn-icon {
+
+}
+.review-form-slogan {
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: uppercase;
+  letter-spacing: -0.03;
+  line-height: 1.17 ;
+
+  margin-bottom: 40px;
+}
+.review-form-field-label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  letter-spacing: -0.02;
+  line-height: ;
+  color: rgb( 64 64 64 / 0.3)
+}
+
+.review-form-field-wrapper {
+
+}
+.review-form-input {
+  width: 100%;
+  height: 68px;
+  border: 1px solid rgb( 17 17 17 / 0.5;
+  border-radius: 15px;
+  background-color: transparent;
+  padding-left: 62px;
+}
+.review-form-input-wrapper {
+  position: relative;
+}
+/* .review-form-input-wrapper:focus-within .review-form-input-icon {
+ stroke: var(--accent-color);
+} або через сестринські елементи-сусіди як нижче: через + це перший сусід зліва з використанням+, а тільда працює по іншому : не перший сусід зліва а будь-який сусід зліва, а нам потрібен саме перший*/
+/* .review-form-input:focus + .review-form-input-icon {
+  stroke: var(--accent-color);
+}
+
+
+
+.review-form-input-icon {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  fill:none;
+  stroke: var(--primary-text-color-dark);
+  transition: stroke 250ms linear;
+  /* fill: none; якщо фарбую через stroke*/
+}
+.review-form-input {
+  outline: none;
+  border: #ffffff;
+  transition: border-color 250ms linear;
+}
+.review-form-message {
+  width: 100%;
+  height: 137px;
+  font-size: 18px;
+  letter-spacing: -0.02;
+  color: var(--secondary-text-color-dark);
+
+  border: 1px solid var(--secondary-text-color-dark);
+  border-radius: 15px;
+  background-color: transparent;
+  padding: 22px 24px;
+  resize: none;
+  transition: border-color 250ms linear;
+
+}
+.review-form-message:focus {
+  outline: none;
+  border-color: var(--accent-color);
+}
+-review-form-message::placeholder {
+  color:rgb( 17 17 17 / 0.5)
+}
+/* на спан перед чекбоксом в  html роблю стилі як у оригінального квадратикаcheckbox  */
+
+.review-form-policy-checkbox:checked + review-form-checkbox-label > .review-form-custom-checkbox {
+  background-color: var(--accent-color);
+  fill: var(--primary-text-color-clear);
+}
+.review-form-custom-checkbox:checked {
+  width: 28px;
+  height: 28px;
+}
+.review-form-custom-checkbox {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border 1px solid rgb(17 17 17 /0.4);
+  cursor: pointer;
+  fill: transparent;
+}
+/*долдаємо SVG в квадрат нашого span  checkbox*/
+.review-form-custom-checkbox-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: ;
+  height: ;
+}
+/* приховати оригінальний чекбокс  візуально а для браузера та скрінрідера залишався - visually-hidden додати як клас на тег оригінального чекбоксу*/
+.review-form-policy-checkbox:focus + review-form-checkbox-label > .review-form-custom-checkbox {
+  outline: 2px solid blue;
+} */ */ */
