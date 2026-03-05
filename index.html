@@ -10,7 +10,8 @@
 
    <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+   
 
   <link rel="stylesheet" href="./css/styles.css">
   <title>Simply Chocolate</title>
@@ -184,12 +185,32 @@
     <section id="making-process">
       <div class="container">
       <h2 class="making-process-title">HOW IT’S MADE?</h2>
-      <img class="making-process-img" 
-        src="" 
-        alt="chocolate making process" 
-        width="600" 
-        height="400"
-      >
+      <div class="making-process-video-wrapper">
+        <img class="making-process-img-preview" 
+          src="./images/making-process/made.jpg" 
+          alt="chocolate making process" 
+        >
+        <button class="play-btn" type="button"
+        aria-label="Play video">
+          <svg class="making-play-icon"
+          width="13"
+          height="11">
+            <use href="./images/icons.svg#icon-play"></use>
+          </svg>
+        </button>
+      </div>
+
+      <div    class="modal-making-video"
+      id="modalMakingVideo">
+        <iframe
+        width="560"
+        height="380"
+        src="./images/making-process/modal-making-video.mp4">
+        </iframe>
+       </div>
+        
+      
+     
       <h3 class="making-process-subtitle">
         Try  our chocolates today and discover the perfect balance of flavor
       </h3>
@@ -461,5 +482,6 @@
     
     </div>
   </div> -->
+  <script src="./js/modal-video.js"  type="module"></script>
 </body>
 </html>

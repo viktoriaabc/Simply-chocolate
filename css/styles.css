@@ -36,6 +36,7 @@ ol {
   margin-top: 0;
   margin-bottom: 0;
   list-style-type: none;
+  padding-left: 0;
 } 
 
 
@@ -110,31 +111,26 @@ button {
 .header-container {
   display: flex;
   align-items: center;
-  
+  justify-content: space-between;
 }
 
 .page-navigation {
  display: flex;
  align-items: center;
- flex-grow: 1;
+ 
 }
 
 .page-logo {
   display: flex;
   align-items: center;
-  font-family: var(--secondary-font-family);
   text-transform: uppercase;
+  padding: 20px 0 14px 0;
+  font-family: var(--secondary-font-family);
   font-weight: 700;
-  letter-spacing: -0.03em;
   color: var(--secondary-text-color-dark);
-}
-
-  .page-logo {
-  font-size: var(--font-size-h3);
-  line-height: 20px;
   line-height: 1.1;
   letter-spacing: -0.03em;
-  color: var(--secondary-text-color-dark);
+  gap: 4px;
 }
 
 .page-logo-icon {
@@ -161,7 +157,7 @@ button {
   }
   .page-menu-link{
     display: block;
-    padding: 30px 0;
+    padding: 32px 0;
     font-weight: var(--font-weight-h1);
     line-height: 1.14;
     color: var(--secondary-text-color-dark);
@@ -172,6 +168,7 @@ button {
     column-gap: 24px;
     margin-left: auto;
     margin-top:auto;
+    padding-left: 0;
   }
   .socials-link {
   display:flex;
@@ -182,16 +179,19 @@ button {
   width: 40px;
   height: 40px;
   }
+  .page-navigation {
+  gap: 47px;
+ }
 }
 
 @media only screen and (min-width: 1200px) {
- .socials-list {
-  display: flex;
-  align-items: center;
-  margin-left: 90px;
-  column-gap: 14px;
+ .page-navigation {
+  gap: 365px;
+
+  
  
  }
+ 
 }
 
 /* .page-menu-link {
@@ -210,17 +210,15 @@ button {
 } 
 
 .socials-icon {
-   stroke: currentColor;
    fill: currentColor;/*видалить stroke*/
 } 
 
 .mobile-menu-button {
-  margin-left: auto;
+  /* margin-left: auto; */
   border: none;
   background-color: transparent;
   stroke: var(--secondary-text-color-dark);
-  padding: 7px 3.5px;
-  line-height: 0;
+
 }
 
 .mobile-menu-icon {
@@ -326,7 +324,7 @@ fill: var(--secondary-text-color-dark);
 }
 
 .main-title {
-  max-width: ;
+  /* max-width: ; */
   margin-bottom: 32px;
   font-family: var(--primery-font-family);
   font-weight: var(--font-weight-h1);
@@ -364,8 +362,7 @@ fill: var(--secondary-text-color-dark);
   font-weight: var(--font-weight-h1mob-h2-h3);
   font-size: var(--font-size-text);
 }
-
-.hero-btn-making {
+ .hero-btn-making {
   padding: 12px 28px;
   min-width: 159px;
   height: 41px;
@@ -376,7 +373,7 @@ fill: var(--secondary-text-color-dark);
   font-weight: var(--font-weight-h1mob-h2-h3);
   font-size: var(--font-size-text);
 }
-
+/* .hero-btn-making: hover focus */
 
 .hero-scroll {
   display: flex;
@@ -419,21 +416,21 @@ fill: var(--primary-text-color-clear);
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding: 0 40px 0;
+  
 }
 }
 
 @media only screen and (min-width: 768px) {
   .hero-btn-wrap {
-    padding: 0;
     gap: 14px;
+    margin-bottom: 0;
 }
 }
 
 @media only screen and (min-width: 768px){
   .hero-btn-buynow {
     padding: 14px 40px;
-    width: 144px;
+    min-width: 144px;
     height: 45px;
     font-weight: var(--font-weight-h1mob-h2-h3);
     font-size: var(--font-size-text);
@@ -442,7 +439,7 @@ fill: var(--primary-text-color-clear);
 @media only screen and (min-width: 768px) {
   .hero-btn-making {
     padding: 14px 40px;
-    width: 183px;
+    min-width: 183px;
     height: 45px;
     border-radius: 100px;
     font-weight: var(--font-weight-h1mob-h2-h3);
@@ -542,10 +539,64 @@ color: rgba(255, 255, 255, 0.7);
 }
 
 /* INGREDIENTS */
+
 /* HOW IT'S MADE */
 
+.making-process-title {
 
-/* INGREDIENTS */
+}
+
+.making-process-video-wrapper {
+  position: relative;
+  cursor: pointer;
+ 
+}
+.making-process-img-preview{
+ 
+  width: 100%;
+  
+}
+.play-btn {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid var(--secondary-text-color-clear);
+  background-color: transparent;
+  cursor: pointer;
+
+}
+.making-play-icon {
+   fill: var(--secondary-text-color-clear);
+}
+.play-btn:hover,
+.play-btn:focus {
+  background-color: var(--accent-color);
+}
+.modal-making-video {
+  display: none;
+}
+.modal-making-video.is-open {
+  position: absolute;
+  display: flex;
+  max-width: 335px;
+  max-height: 223;
+  object-fit: cover;
+  overflow:hidden;
+  transform: translateY(  -100%);
+  
+}
+/* OUR PRODUCTS */
+
+/* TOP SELLERS */
+
+/* CHOCOLATE IS LOVED */
 
 .reviews-section-title {
   margin-bottom: 91px;
@@ -662,7 +713,7 @@ stroke: var(--accent-color);
   stroke: var(--primary-text-color-dark);
   transition: stroke 250ms linear;
   /* fill: none; якщо фарбую через stroke*/
-}
+
 .review-form-input {
   outline: none;
   border: #ffffff;
