@@ -101,7 +101,7 @@
       </div>
     </section>
     <section id="benefits">
-      <div class="container">
+      <div class="container benefits-container">
       <h2 class="visually-hidden benefits-title">Benefits</h2>
       <ul class="benefits-list">
         <li class="benefits-list-item">
@@ -362,13 +362,14 @@
       </ul>
       </div>
     </section>
-    <section id="reviews reviews-section-title">
-      <div class="container">
-      <h2 class="reviews-title">CHOCOLATE IS LOVED</h2>
+    <section id="reviews">
+      <div class="container reviews-container">
+      <h2 class="reviews-title"><span class="accent-color">Chocolate</span> Is Loved</h2>
       <ul class="reviews-list">
         <li class="reviews-list-item">
-          <img class="reviews-list-img" 
-            src="" 
+          <img class="reviews-avatar" 
+            srcset="./images/reviews/reviews1.jpg 1x, ./images/reviews/reviews1@2x.jpg 2x"
+            src="./images/reviews/reviews1.jpg" 
             alt="Victoria Dobrzhanska avatar"
             width="80"
             height="80"
@@ -379,8 +380,10 @@
           </p>
         </li>
         <li class="reviews-list-item">
-           <img class="reviews-list-img" 
-            src="" 
+           <img
+            class="reviews-avatar"
+            srcset="./images/reviews/reviews2.jpg 1x, ./images/reviews/reviews2@2x.jpg 2x"
+            src="./images/reviews/reviews1.jpg" 
             alt="Nazar Babenko avatar"
             width="80"
             height="80"
@@ -391,8 +394,10 @@
           </p>
         </li>
         <li class="reviews-list-item">
-          <img class="reviews-list-img" 
-            src="" 
+          <img
+            class="reviews-avatar" 
+            srcset="./images/reviews/reviews3.jpg 1x, ./images/reviews/reviews3@2x.jpg 2x"
+            src="./images/reviews/reviews3.jpg" 
             alt="Olena Kampusch avatar" 
             width="80"
             height="80"
@@ -485,3 +490,12 @@
   <script src="./js/modal-video.js"  type="module"></script>
 </body>
 </html>
+<div class="mobile-menu .is-open">
+  <div class="container container-mob-menu">
+    <button>
+      <svg width="28" height="28">
+        <use></use>
+      </svg>
+    </button>
+  </div>
+</div>

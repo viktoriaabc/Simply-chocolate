@@ -3,4 +3,3 @@ const modalVideo = document.querySelector("#modalMakingVideo");
 wrapperVideo.addEventListener("click", () => {
   modalVideo.classList.toggle("is-open");
 });
-console.log(wrapperVideo);

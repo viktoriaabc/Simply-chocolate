@@ -79,6 +79,19 @@ button {
   font-family: inherit;
 }
 
+.visually-hidden {
+position: absolute;
+width: 1px;
+height: 1px;
+padding: 0;
+margin: -1px;
+border: 0;
+white-space: nowrap;
+overflow: hidden;
+clip: rect(0, 0, 0, 0);
+clip-path: inset(100%);
+}
+
 .accent-color {
   color: var(--accent-color);
 }
@@ -112,6 +125,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  /* padding-top et buttom */
 }
 
 .page-navigation {
@@ -140,9 +154,25 @@ button {
 
 
   .page-logo-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+/* @media only screen and  (min-width: 1200px) {
+  .page-logo {
+   
+    font-size: 18px;
+    line-height: 1.1;
+  }
+   .page-logo-icon {
     width: 24px;
     height: 24px;
-  }
+   }
+} */
+  /* .page-menu-link:hover,
+  .page-menu-link:focus {
+    color: var(--accent-color);
+  } викладач сказав з моб версії але ж у нас меню вікривається і в мобверсії немає навігації в меню*/
 
   .page-menu,
   .socials-list {
@@ -163,6 +193,7 @@ button {
     color: var(--secondary-text-color-dark);
     font-family: var(--second-family);
   }
+
   .page-menu {
     display: flex;
     column-gap: 24px;
@@ -243,7 +274,7 @@ fill: var(--secondary-text-color-dark);
 
 /* HERRO */
 .hero-section {
-  padding-bottom: 80px;
+  padding-bottom: 100px;
 }
 .hero-container {
   padding: 392px 20px 20px;
@@ -473,43 +504,38 @@ fill: var(--primary-text-color-clear);
 }
 
 
-/* 
-
-
 /* BENEFITS */
-.visually-hidden {
-position: absolute;
-width: 1px;
-height: 1px;
-padding: 0;
-margin: -1px;
-border: 0;
-white-space: nowrap;
-overflow: hidden;
-clip: rect(0, 0, 0, 0);
-clip-path: inset(100%);
-}
+
 #benefits {
   background-color: var(--bcgr-color-benefits);
-
   margin-bottom: 100px;
 }
+
 .benefits-list {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   padding-left: 0;
 }
-@media only screen and (min-width: 768px) {
-  .benefits-list {
-    flex-direction: row;
-  }
+
+.benefits-list-item {
+  /* max-width: 335; */
+  margin-bottom: 20px;
+  position: relative;
 }
-@media only screen and (min-width: 768px) {
-  .benefits-list-item {
-    
-  }
-}
+/* .benefits-list-item:not(:last-child):after {
+  content: "";
+  position: absolut;
+  top: calc(50% - 62px);
+  right: 44px;
+ height: 124px;
+  width:1px;
+} */
+/* .benefits-span-line{
+
+   height: 124px;
+  width:1px;
+} */
 .benefits-icon-wrapper {
   display: flex;
   justify-content: center;
@@ -528,7 +554,7 @@ clip-path: inset(100%);
 
 .benefits-subtitle {
   margin-bottom: 18px;
-  font-weight: 600;
+  font-weight: var(--font-weight-h1mob-h2-h3);
   font-size: var(--font-size-h3);
   color: var(--primary-text-color-clear);
 }
@@ -537,8 +563,46 @@ clip-path: inset(100%);
 letter-spacing: -0.02em;
 color: rgba(255, 255, 255, 0.7);
 }
+@media only screen and (min-width: 768px) {
+  .benefits-container {
+  padding: 50px 32px;
+  }
+  .benefits-list {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    row-gap: 44px;
+
+  }
+  .benefits-list-item {
+    margin-bottom: 0;
+    width: calc((100% - 88px) / 2);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .benefits-list {
+    flex-wrap: nowrap;
+  }
+.benefits-list-item {
+  width: calc ((100% - 88px) / 3);
+  padding: 50px;
+  
+  }
+  
+}
+
 
 /* INGREDIENTS */
+
+
+ @media only screen and (min-width 768px){
+
+} 
+
+@media only screen and (min-width 1200px){
+
+}
+
 
 /* HOW IT'S MADE */
 
@@ -592,31 +656,127 @@ color: rgba(255, 255, 255, 0.7);
   transform: translateY(  -100%);
   
 }
+
+
 /* OUR PRODUCTS */
 
-/* TOP SELLERS */
+ @media only screen and (min-width 768px){
 
-/* CHOCOLATE IS LOVED */
+} 
 
-.reviews-section-title {
-  margin-bottom: 91px;
+@media only screen and (min-width 1200px){
+
 }
+
+
+/* TOP SELLERS */
+ @media only screen and (min-width 768px){
+
+} 
+
+@media only screen and (min-width 1200px){
+
+}
+
+
+/* REVIEWS / CHOCOLATE IS LOVED */
+
+#reviews {
+  padding-bottom: 80px;
+}
+.reviews-container {
+  /* width: 355px; */
+}
+.reviews-title {
+  text-transform: uppercase;
+  font-weight: var(--font-weight-h1mob-h2-h3);
+  font-size: var(--font-size-h1-mob);
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-align: center;
+  margin-bottom: 74px;
+  color: var(--secondary-text-color-dark);
+  box-shadow: 0  9px 100px 0 rgba(17, 17, 17, 0.01);
+  
+}
+
 .reviews-list {
-  display: flex;
-  width: calc((100% - 28px * 2) / 3);
+  /* width: 335px; */
+  margin-bottom: 32px;
+
+  
 }
 .reviews-list-item {
-  border: ;
-  border-radius: ;
-  box-shadow: ;
-  background-color: ;
-  padding: 56px 24px 24px 24px;
+  /* width: 355px; */
+  padding:42px 18px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 9px 100px 0 rgba(17, 17, 17, 0.03);
+  background: var(--primary-text-color-clear);
 }
-/* FOOTER */
-.adresse-footer {
-font-style : normal ;
+.reviews-list-item:not(:first-child) {
+  display: none;
+}
+.reviews-avatar {
+  border-radius: 50%;
+  margin-top: -84px; 
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 18px;
 }
 
+.reviews-list-name {
+  font-weight: var(--font-weight-h1mob-h2-h3);
+  font-size: var(--font-size-h3);
+  line-height: 1.3;
+  text-align: center;
+  color: var(--secondary-text-color-dark);
+  margin-bottom: 24px;
+}
+
+.reviews-list-text {
+color: var(--primary-text-color-dark);
+text-align: center;
+}
+.reviews-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  margin: 0 auto;
+  border: 1px solid var(--accent-color);
+  border-radius: 100px;
+  background-color: transparent;
+  max-width: 165px;
+  max-height: 41px;
+  font-weight: var(--font-weight-h1mob-h2-h3);
+  color: var(--secondary-text-color-dark);
+}
+/* @media only screen and (min-width 768px){
+/* display: flex;
+  width: calc((100% - 28px * 2) / 3); 
+}*/
+
+
+@media only screen and (min-width 1200px){
+
+}
+
+
+
+
+
+/* FOOTER */
+.adresse-footer {
+font-style: normal ;
+}
+ @media only screen and (min-width 768px){
+
+} 
+
+@media only screen and (min-width 1200px){
+
+}
 /* .backdrop {
   position: fixed;
   left: 0;
@@ -772,3 +932,35 @@ stroke: var(--accent-color);
 .review-form-policy-checkbox:focus + review-form-checkbox-label > .review-form-custom-checkbox {
   outline: 2px solid blue;
 } */ */ */
+
+
+.mobile-menu {
+  position: fixed;
+  z-index: 9999999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(30 24 25);
+  transform: translateX(100%);
+  transition: transform 250ms linear;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0%);
+}
+.container-mob-menu {
+  position: relative;
+}
+
+.mobile-menu-close-btn {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  line-height: 0;
+  border: none;
+  background-color: transparent;
+
+}
+/* Мобільне меню :  кнопка відкриття і закриття меню повині бути одна на одною, кнопка закриття позиціонується по різному бо відносно в'юпорта який змінюєтбся від розміру екрану, тому слід позиціонувати кнопку закриття в межах контейнера поз релатів
+як зробити щоб абсолютний ел кнопка закриття не клеїлася до краю права контенту бо ігнорує як абсолют падінг контейнера тому слід враховувати і додати правий падінг від контентного контейнера до к */
